@@ -15,6 +15,10 @@ function clearButton(){
 }
  let equal = function equal(){
   try{
+    if(!input.value.trim()) {
+      inputParagraph.innerText = "";
+      return;
+    }
   let result = input.value
   .replace(/×/g, "*")
   .replace(/÷/g, "/");
